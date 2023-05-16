@@ -1,0 +1,11 @@
+int32 message_id
+int32 number_setpoint
+int32 max_number_setpoints
+float32 x_set
+float32 y_set
+float32 psi_set
+float32 s_k_set
+float32 chi_set
+float32 v_set
+int32 dir_set
+float32 mast_set

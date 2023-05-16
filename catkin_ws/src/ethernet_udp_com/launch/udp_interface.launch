@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="ethernet_udp_com" type="autera_udp_send.py" name="udp_msg_sender" output="screen"/>
+  <node pkg="ethernet_udp_com" type="autera_udp_recv.py" name="udp_msg_receiver" output="screen"/>
+</launch>

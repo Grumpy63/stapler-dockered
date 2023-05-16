@@ -1,0 +1,28 @@
+version: '3'
+services:
+  ws:
+    build: .
+    network_mode: "host"
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    # privileged: true
+    # used for displaying graphical tools
+    # 'xhost +local:docker' must be done in terminal outside of docker container
+    #environment:
+    #  - DISPLAY=$DISPLAY
+    #  - QT_X11_NO_MITSHM=1
+    #  - XAUTHORITY=/tmp/.docker.xauth
+    # mount volumes
+    volumes:
+    #  - "/home/autera-admin/developement/ros1_noetic_docker/catkin_ws/src:/home/catkin_ws/src"
+    #  - "/home/autera-admin/developement/ros1_noetic_docker/records_local:/home/records_local"
+    #  - "/media/autera-admin/TOSHIBA EXT/records:/home/records_ext"
+    #  - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    #  - /tmp/.docker.xauth:/tmp/.docker.xauth:rw
+      - C:/DATABASE:/home/DATABASE
+      - C:/REPOS/stapler-dockered/catkin_ws/src:/home/catkin_ws/src
+    #devices:
+      # sharing graphics driver (http://wiki.ros.org/docker/Tutorials/Hardware%20Acceleration#nvidia-docker2)
+      # - "/dev/dri:/dev/dri"
+      # mounting usb port for sbg imu
+      #- "/dev/ttyUSB0:/dev/ttyUSB0"
